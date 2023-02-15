@@ -1,0 +1,330 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+header{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  height: 80px;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: #d9d9d9;
+  position: sticky;
+  top:0px;
+  padding:0 50px;
+  //background: linear-gradient(to left, #550080, #cc66ff);
+  background: linear-gradient(to left, #d966ff, #4d0099);
+  left:0;
+}
+
+#logo{
+  color: white;
+  font-size: 30px;
+  text-shadow: 0 0 25px white;
+}
+
+/* Start here!!! */
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  }
+
+#menu-toggle {
+  display: none;
+  position: absolute;
+  height: 0;
+
+  }
+
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  //display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  //transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+/* This is the end!!! */
+
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  //display:flex;
+}
+
+li{
+  //padding:10px;
+  //list-style-type:none;
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+a{ 
+  text-decoration:none;
+  color:white;
+  transition-delay: 0.2s;
+}
+
+a:active {
+  color: purple;
+}
+
+a:hover{
+  color:black;
+}
+
+#mission{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:50px 80px;
+  gap:20px
+}
+
+#mission div{
+  width:50%;
+  //dispaly:flex;
+  //align-items: center;
+  //justify-content: center;
+}
+
+#ourmission{
+  color:#6600cc;
+  letter-spacing:1px;
+}
+
+#paving-the-way{
+  font-size:45px;
+  letter-spacing:1px;
+}
+
+p{
+  color:#4d4d4d;
+}
+
+#mission-pic{
+  width: 100%;
+}
+
+#service{
+  background-color:#f2f2f2;
+  padding:30px 80px;
+  text-align:center;
+  
+}
+
+#ourservice{
+  color: #ff1a66;
+}
+
+#the-aim{
+  font-size:30px;
+  letter-spacing:1px;
+}
+
+#services{
+  background-color:white;
+  padding:25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 10px;
+ 
+  gap:5%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 0px rgba(0.2, 0.2, 0.2, 0.2);
+  margin-bottom:20px;
+}
+
+.service-heading{
+  color:purple;
+  
+}
+
+#client{
+  text-align:center;
+  padding: 50px 80px;
+}
+
+.brands{
+  width: 15%;
+  padding:0px 20px;
+}
+
+#ourclints{
+  overflow: scroll;
+  height:250px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+footer{
+  background-color:#4d0099;
+  height:120px;
+  text-align:center;
+}
+
+#copyrights{
+  color:white;
+  letter-spacing:1px;
+  padding-top:50px;
+}
+
+.service-pic {
+  height:150px;
+  width:150px;
+  max-width: 350px;
+}
+
+/**
+   Media Queries are here for differ device screen size
+**/
+
+@media(max-width:800px){
+  a:hover{
+  color:white;
+}
+  
+  header{
+    height: 65px;
+  }
+  
+  .menu-button-container {
+    display: flex;
+  }
+  
+  ul {
+    position: absolute;
+    top: 0;
+    margin-top: 65px;
+    color: #000;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #menu-toggle ~ ul li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked ~ ul li {
+    border: 1px solid #333;
+    height: 2.0em;
+    padding: 0.5em;
+  }
+  
+  ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-color: #222;
+    opacity:0.9;
+  }
+
+  ul > li:hover{
+   opacity:1;
+  }
+   
+  #mission{
+    flex-direction:column;
+
+  }
+  
+  #mission div{
+    width: 80%;
+    }
+}
+
+@media(max-width:720px){
+  #servces{
+    flex-direction:column;
+    padding: 40px;
+    gap:50px;
+  }
+}
+
+@media(max-width:600px){
+  
+    header{
+    padding:0 30px;
+    height: 65px;
+  }
+  
+  #mission div{
+    width: 100%;
+    }
+  #paving-the-way{
+    font-size:35px;
+}
+  
+  #service{
+    padding:30px 25px;
+  }
+  
+  #services{
+    flex-direction:column;
+    padding: 40px;
+  }
+  
+  .brands{
+  width: 35%;
+  padding:0px 20px;
+}
+  
+  #ourclints{
+  height:250px;
+  }
+  
+  #logo{
+  font-size: 20px;
+  }
+  
+  footer{
+    height: 80px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  #copyrights{
+  color:white;
+  letter-spacing:1px;
+  padding:0px;
+}
+}

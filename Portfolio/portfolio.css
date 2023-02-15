@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@300&family=Roboto+Condensed&family=Roboto:wght@100&family=Sofia+Sans+Extra+Condensed&family=Sofia+Sans:wght@1;100;200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sofia Sans';
+    box-sizing: border-box;
+}
+
+.pages{
+    height: 100vh;
+    width: 100%;
+}
+.page-home{
+    background: conic-gradient(from 180deg at 50% 50%, #3F324F 0deg, #000000 360deg);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-home h1{
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    font-size: 70px;
+    font-family: Sofia Sans Extra Condensed;
+    text-transform: uppercase;
+    
+}
+.name span{
+    font-family: Sofia Sans Extra Condensed;
+    line-height: 150px;
+    padding: 20px 0;
+    width: 100px;
+    height: 300px;
+    box-sizing: border-box;
+    background: rgba(0, 26, 53, 0.5);
+    border: 3px solid rgba(187, 112, 152, 0.27);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.page-home .home-content{
+    margin: 2rem;
+    font-weight: 250;
+    letter-spacing: 0.45rem;
+    position: relative;
+    padding-top: 20px;
+}
+.page-home .home-content::after{
+    content: '';
+    width: 100%;
+    margin-top: 20px;
+    height: 1px;
+    background-color: rgba(187, 112, 152, 0.27);
+    position: absolute;
+
+}
+
+.page-home .home-content p{
+    margin: 10px;
+    text-align: center;
+}
+.flows{
+    content:'';
+    position: absolute;
+}
+/*curcle*/
+.flow-1{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(rgba(130, 60, 200, 1),rgb(188, 60, 200));
+    top: -15px;
+    left: -30px; 
+}
+/*curcle*/
+.flow-2{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(rgb(29, 35, 66),rgb(60, 200, 177));
+    top: 10%;
+    left: 90%;  
+}
+/*curcle*/
+.flow-3{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(rgb(102, 60, 200),rgb(60, 109, 200));
+    top: 500px;
+    left: 30px;  
+}
+/*curcle*/
+.flow-4{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(rgb(198, 200, 60),rgb(25, 138, 113));
+    top: 80%;
+    left: 47%;  
+}
+
+.flow-5{
+    /*Polygon*/
+    width: 3rem;
+    height: 3rem;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background: linear-gradient(rgb(200, 60, 200),rgb(134, 112, 128));
+    top: 15%;
+}
+/*Polygon*/
+.flow-6{
+    width: 3rem;
+    height: 3rem;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background: linear-gradient(rgb(130, 114, 168),rgb(135, 182, 190));
+    top: 200px;
+    left: 30px;  
+} 
+/*triangle*/
+.flow-7{
+    width: 2rem;
+    height: 2rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(rgb(60, 200, 142),rgb(3, 73, 52));
+    transform: rotate(25deg);
+    top: 50%;
+    left: 80%;  
+}
+/*triangle*/
+.flow-8{
+    width: 1.5rem;
+    height: 1.5rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(rgb(173, 111, 18),rgb(104, 45, 45));
+    transform: rotate(90deg);
+    top: 130px;
+    left: 200px;  
+}
+/*triangle*/
+.flow-9{
+    width: 1.5rem;
+    height: 1.5rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(rgb(133, 111, 148),rgb(48, 4, 61));
+    transform: rotate(90deg);
+    top: 60%;
+    left: 20%;  
+}
+
+
+.page-aboutme{
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1.2fr 0.8fr 0.3fr;
+    grid-template-areas: 
+    "body pic"
+    "ty pic"
+    "quote quote";
+    background: #EEF2F5;
+    
+}
+.aboutme-section-1{
+    grid-area: body;
+   
+}
+.aboutme-section-1 h2{
+    letter-spacing: 0.5rem;
+    font-size: 37px;
+    font-weight: normal;
+    padding: 4rem 0 0 3rem;
+}
+.aboutme-section-1 p{
+    padding: 3rem;
+    text-indent: 30px;
+    line-height: 2rem;
+    font-size: 18px;
+}
+.aboutme-section-2{
+    grid-area: ty;
+    
+    
+}
+.info-box{
+    border: 1px solid #000;
+    background: rgba(187, 112, 152, 0.43);
+    width: 17rem;
+    height: 9rem;
+    position: relative;
+    padding: 1rem;
+    line-height: 1.7rem;
+    font-size: 13px;
+    letter-spacing: 1px;
+    float: right;
+    margin: 1.5rem 3rem 0;
+    
+}
+.info-box::after{
+    content: '';
+    width: 200%;
+    height: 40px;
+    position: absolute;
+    bottom: -25px;
+    left: -12rem;
+    background: rgba(195, 144, 169, 0.17);
+    
+}
+.aboutme-section-2 h4{
+    background: rgba(115, 8, 166, 0.13);
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: 10px;
+    letter-spacing: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5rem;
+    font-size: 17px;
+}
+.aboutme-section-3{
+    grid-area: pic;
+    
+}
+.aboutme-section-3 img{
+    width: 60%;
+    margin: 5% 15%;
+    
+}
+.aboutme-section-4{
+    grid-area: quote;
+    
+    padding: 0 0 0 2rem;
+}
+.aboutme-section-4 h1{
+    letter-spacing: 0.5rem;
+    
+}
+.aboutme-section-4 span{
+    letter-spacing: 0.3rem;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+/*Resume Page*/
+.page-resume{
+    background: linear-gradient(180deg, #C2B0C4 0%, 
+                                        #897575 39.43%);
+    height: 150vh;
+    position: relative;
+    z-index: -1;
+    height: auto;
+}/*
+.page-resume::after{
+    background-image: url"images/cofeeBg-cut.jpg";
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+    height:160px;
+    background-size: contain; 
+    background-position: center center; 
+    border: 1px solid #000;
+}*/
+
+
+.parts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-resume .part-1{
+    background: #EEF2F5;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+}
+
+
+.parts h1{
+    letter-spacing: 0.3rem;
+    
+}
+.skill-detail{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+}
+.skill-name .names{
+    margin: 0 0 8px;
+}
+.skill-scale .scales{
+    margin: 0 0 8px;
+}
+.scales .scale{
+    height:10px;
+    width:10px;
+    background: rgb(201, 194, 194);
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 2px;
+}
+.scales .scale-color{
+    background: black;
+}
+
+.page-resume .part-2{
+    background: #EEF2F5;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+}
+
+.experience-container{
+    margin: 4% 15% ;
+
+}
+.experiences{
+   margin:  5% 0;
+}
+.experience-headings{
+    margin: 3% 0;
+}
+.experience-details{
+    margin: 0 10%;
+}
+.page-resume .part-3{
+    background: #EEF2F5;
+    height: 22rem;
+    width: 22rem;
+    border-radius: 50%;
+    padding: 5%;
+}
+
+.certificates-list{
+    padding: 4% 0 0 3%;
+
+
+}
+
+.certificates-list ul li{
+    margin: 0 0 3% 10%;
+    
+}
+
+.page-portfolio{
+    background: linear-gradient(180.27deg, rgba(187, 112, 152, 0.226) 0.23%, 
+                                           rgba(118, 0, 120, 0.233) 99.77%);
+    
+}
+
+.page-portfolio .part_1{
+    text-align: center;
+    padding: 3rem;
+}
+
+.page-portfolio .part_1 h2{
+    margin: 0 0 1.2rem;
+    letter-spacing: 0.6rem;
+    font-size: 3.5rem;
+}
+
+
+.view-port-container{
+    background: #fff;
+    /*width: 30%;*/
+    width: 360px;
+    height: 3.5rem;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    letter-spacing: 0.25rem; 
+}
+.view-port-container span:hover{
+    color: blueviolet;
+}
+
+.portfolio-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5%;
+}
+.portfolio-project .projects{
+    width: 30%;
+    min-width: 300px;
+    margin: 2% 0;
+}
+.portfolio-project .projects img{
+    width: 100%;
+    height: 100%;
+}
+
+.page-contact{
+background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),
+    url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.social-media{
+    background: #8B7292;
+    height: 90%;
+    width: 35%;
+    border-radius: 8px;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%;
+    padding: 2%;
+}
+
+.social-container{
+    display: flex;
+    align-items: center;
+    gap: 5%; /*remove*/
+    width: 70%;
+}
+.social-container a{
+    text-decoration: none;
+    color: #000;
+}
+.social-container i{
+    border: 1px solid rgb(225 ,225,225,0.6);
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    margin-right: 15px;
+}
+.social-container .email{
+    background-color: #db4b43;
+}
+.social-container .linkedin{
+    background-color: #006fae;
+}
+.social-container .github{
+    background-color: #000000;
+}
+.social-images img{
+    width: 80%;
+}
+.form{
+    box-shadow: var(--bd-shadow);
+    background: #fff;
+    width: 50%;
+    /*min-height: 400px;*/
+    padding: 2% 5%;
+    position: relative;
+    border-radius: 8px;
+    margin-left: -150px;
+}
+
+form{
+    background: #fff;
+    padding: 0 1%;
+}
+
+.contact-heading{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+form div{
+    padding: 10px;
+}
+.send-button{
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 7px 35px;
+    font-size: 16px;
+    background: #210035;
+    color: #fff;
+    border: none;
+}
+.send-button:hover{
+    opacity: 0.7;
+}
+
+input,textarea{
+    padding: 7px;
+    width: 100%;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 5px lightgray;
+    outline: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus{
+    outline: none !important;
+    box-shadow: 0 0 10px rgba(118, 0, 120, 0.233);
+    border: 1px solid rgba(91, 23, 122, 0.459);
+}
+
+footer{
+    height: 5rem;
+    width: 100%;
+    background: conic-gradient(from 120deg at 49.8% 74%, rgba(91, 23, 122, 0.74) 0deg, #210035 160deg, rgba(91, 23, 122, 0.74) 360deg);
+    //background: linear-gradient(342deg, rgba(91, 23, 122, 0.74) 0%, #210035 160deg 35%, rgba(91, 23, 122, 0.74) 100%);
+    color: #fff;
+    letter-spacing: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+@media (max-width:800px){
+    .page-home h1{
+        letter-spacing: 1rem;
+        font-size: 45px;
+    }
+    .page-aboutme{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 0 0 10%;
+    }
+    .aboutme-section-3{
+        margin: 10% 0;
+    }
+    .page-resume{
+        height: auto;
+    }
+    .page-portfolio{
+        height: auto;
+        padding: 0 0 10%;
+    }
+
+    .page-contact{
+        flex-direction: column;
+        margin: 10px 20px;
+    }
+    .social-media{
+        height: 30%;
+        width: 90%;
+    }
+    .social-container{
+        flex-direction: column;
+        gap: 5%;
+    }
+    .form{
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+    }
+
+
+
+}
