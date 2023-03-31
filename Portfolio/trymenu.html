@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp with menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+/*Meneu-Bar*/
+.nav-conatiner{
+    width: 90%;
+    bottom: 5%;
+    position: fixed;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.nav-bar{
+    background: rgba(59, 53, 53, 0.61);
+    color: #fff;
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 0 30px;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin:0.7vw;
+}
+.nav-bar span:hover{
+    opacity: 0.5;
+}
+.nav-social i{
+    border: 1px solid rgba(225, 225, 225, 0.986);
+    border-radius: 50%;
+    padding: 12px;
+    color: rgba(255, 255, 255, 0.788);
+}
+        /*popup*/
+        .page-portfolio .popup-imag{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.9);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            display: none;
+        }
+        .page-portfolio .popup-imag span{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .page-portfolio .popup-imag img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 5px solid #fff;
+            border-radius: 5px;
+            object-fit: cover;
+            /*add*/
+            width: 850px;
+            height: 550px;
+        }
+        
+
+
+        /*Tablet Size*/
+        @media (max-width:760px){
+
+
+        /*Conatiner PopUp image*/
+            .container .popup-imag img{
+                width: 95%;
+            }
+        }
+
+        .page-portfolio{
+    background: linear-gradient(180.27deg, rgba(187, 112, 152, 0.226) 0.23%, 
+                                           rgba(118, 0, 120, 0.233) 99.77%);
+            
+            /*add*/
+            position: relative;
+            min-height: 100vh;
+}
+
+.page-portfolio .part_1{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.page-portfolio .part_1 h2{
+    margin: 0 0 1.2rem;
+    letter-spacing: 0.6rem;
+    font-size: 3.5rem;
+    color: rgb(160, 115, 173);
+}
+
+
+.view-port-container{
+    background: #fff;
+    /*width: 30%;*/
+    width: 360px;
+    height: 3.5rem;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn{
+    border: none;
+    background-color: #fff;
+    letter-spacing: 0.25rem; 
+    font-size: 15px;
+}
+.view-port-container span:hover{
+    color: rgb(160, 115, 173);
+}
+
+.portfolio-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5%;
+}
+
+.projects{
+            position: relative;
+            display: none; 
+            margin: 2% 0;
+
+            /*add*/
+            width: 250px;
+            width: 350px;
+            box-shadow: 0 5px 15px rgb(0,0,0,.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+img{
+    width: 100%;
+    height: 100%;
+    display:block;
+    transition: 0.2s linear;
+}
+.projects:hover img{
+        transform: scale(1.1);
+        }
+.show{
+    display: block;
+}
+
+.projects .img-blur{
+    position: absolute;
+    height: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 24, 24, 0.616);
+}
+.projects:hover .img-blur{
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: .3s ease;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #eef2f5;
+    background-color: rgba(160, 115, 173, 0.863);
+}
+.overlay .seperater{
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.123);
+}
+
+.projects:hover .overlay{
+    height: 6vh;
+}
+.projects:hover i:hover{
+    opacity: 0.3;
+}
+.overlay a{
+    color:white ;
+}
+
+/*Tablet*/
+@media (max-width:768px){
+    /*.nav-conatiner{
+        display: none;
+    }*/
+    
+        /* ADD Menu burger and exit*/    
+        #check{
+            //display: none;
+            margin: 20px 0 0 50px;
+        }
+
+        label #btn,
+        label #cancel{
+            position: fixed;
+            cursor: pointer;
+            background: #042323;
+            border-radius: 5px;
+            color: pink;
+        }
+        
+        label #btn{
+            left: 20px;
+            top: 20px;
+            font-size: 20px;
+            padding: 6px 12px;
+            transition: all .5s;
+
+        }
+
+        label #cancel{
+            z-index: 1111;
+            left: -195px;
+            top: 17px;
+            font-size: 15px;
+            color: pink;
+            padding: 4px 9px;
+            transition: all .5s ease;  
+        }
+        #check:checked ~ .nav-conatiner{
+            left: 0;
+        }
+        #check:checked ~ label #btn{
+            left: 250px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left: 195px;
+
+        }
+ 
+    .nav-conatiner{
+        width: 250px;
+        /*left: 0;*/
+        bottom: 0;
+        position: fixed;
+        /*height: 100%;*/
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        /*add*/
+        left: -250px;
+        transition: all .5s ease;
+    }
+
+
+
+    
+    .nav-bar{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 0 15px 15px 0;
+        padding: 0;
+    }
+
+    .nav-bar a{
+        margin:0vw;
+        display: block;
+    }
+
+    .nav-section{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .nav-section a{
+        border: 1px solid rgba(32, 30, 30, 0.233);
+        padding: 20px 0;
+        text-align: center;
+    }
+    .nav-section a:hover{
+        background-color: rgb(189, 184, 184);
+        color: #000;
+    }
+
+    .nav-social{
+        margin-top: 30%;
+    }
+    .nav-social a{
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .nav-social i{
+        border: 1px solid rgba(225, 225, 225, 0.986);
+        border-radius: 50%;
+        padding: 12px;
+        color: rgba(255, 255, 255, 0.788);
+    }
+    /*Portfolio Page*/
+    .page-portfolio{
+        height: auto;
+        padding: 0 0 10%;
+    }
+    
+    .portfolio-project .projects{
+        min-width: 300px; 
+    }
+
+    /*Mobile*/
+    @media (max-width:425px){
+        /*Portfolio*/
+    .page-portfolio .part_1 h2{
+        font-size: 10vw;
+    }
+
+    .view-port-container{
+        width: 80%;
+        letter-spacing: 0.2rem; 
+        font-size: 12px;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 5% 5%;
+        gap: 1rem;
+    }
+    
+    .portfolio-project .projects{
+        min-width: 80%; 
+    }
+    }
+}
+
+
+    </style>
+</head>
+<!--Menu burger and exit-->
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <!--nav-bar -->
+    <div class="nav-conatiner">
+        <div class="nav-bar">
+            <div class="nav-section">
+                <a href="#home"><span>Home</span></a>
+                <a href="#about"><span>About</span></a>
+                <a href="#resume"><span>Resume</span></a>
+                <a href="#portfolio"><span>Portfolio</span></a>
+                <a href="#contact"><span>Contact</span></a>
+            </div>
+            <div class="nav-social">
+                <a href="http://linkedin.com/in/mattikan-tongsai"> <i class="fa-brands fa-linkedin-in linkedin"></i></a>
+                <a href="https://github.com/MattikanT"><i class="fa-brands fa-github github"></i></a>
+                <a href="https://codepen.io/MattikanT"><i class="fa-brands fa-codepen codepen"></i></a>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="pages page-portfolio" id="portfolio">
+        <div class="part_1">
+            <h2>Portfolio</h2>
+            <div class="view-port-container">
+                <button class="btn" onclick="filterObjects('all')"> <span>Show All</span> </button>
+                <button class="btn" onclick="filterObjects('personal')"> <span> Personal</span> </button>
+                <button class="btn" onclick="filterObjects('acadamic')"><span>Academic </span> </button>
+            </div>
+        </div>
+
+        <div class="portfolio-project">
+            <div class="projects personal">
+                <img src="images/P-1.png" alt="">
+                <div class="img-blur"></div>
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <div class="seperater"></div>
+                    <a href="https://www.freecodecamp.org/certification/Mattikan_Tongsai/responsive-web-design"><i class="fa-solid fa-angles-right"></i></a>
+                </div>
+            </div>
+                
+            <div class="projects acadamic">
+                <img src="images/p-2.png" alt="">
+                    <div class="img-blur"></div>
+                    <div class="overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <div class="seperater"></div>
+                        <a href="https://codepen.io/MattikanT"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
+            </div>
+            <div class="projects personal">
+                <img src="images/P-3.png" alt="">
+                    <div class="img-blur"></div>
+                    <div class="overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus "></i>
+                        <div class="seperater"></div>
+                        <a href="https://github.com/MattikanT"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div class="popup-imag">
+            <span>&times;</span> <!--Tis is x to exit-->
+            <img src="./images/P-1.png" alt="">
+        </div>
+    </div>
+
+    <!--Filter-->
+    <script>
+
+        filterObjects("all");
+
+        function filterObjects(c){
+            var x,i;
+            x = document.getElementsByClassName("projects");
+            if(c == "all") c ="";
+            for(i = 0; i < x.length; i++){
+                removeClass(x[i], "show");
+                if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+            }
+        }
+
+        function addClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                if(arr1.indexOf(arr2[i]) == -1){
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function removeClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                while(arr1.indexOf(arr2[i]) > -1){
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+             element.className = arr1.join(" ");
+        }
+    </script>
+     <!--Zoom-->
+    <script>
+        document.querySelectorAll('.portfolio-project .img-blur').forEach(projects => {
+            projects.onclick = () => {
+                document.querySelector('.page-portfolio .popup-imag').style.display = 'block';
+                document.querySelector('.popup-imag img').src = projects.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-imag span').onclick = () =>{
+            document.querySelector('.popup-imag').style.display = 'none';
+        }
+    </script>
+    <!--Put icons-->
+    <script src="https://kit.fontawesome.com/c69dce7d1d.js" crossorigin="anonymous"></script>
+</body>
+</html>

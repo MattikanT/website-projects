@@ -3,9 +3,9 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Sofia Sans';
     box-sizing: border-box;
 }
+
 .nav-conatiner{
     width: 90%;
     bottom: 5%;
@@ -42,10 +42,13 @@
     padding: 12px;
     color: rgba(255, 255, 255, 0.788);
 }
+
 .pages{
     height: 100vh;
     width: 100%;
 }
+
+/*Home-Page*/
 .page-home{
     background: conic-gradient(from 180deg at 50% 50%, #3F324F 0deg, #000000 360deg);
     color: #fff;
@@ -206,6 +209,7 @@
     
 }
 
+
 /*Aboutme - Page*/
 .page-aboutme{
     display: grid;
@@ -354,6 +358,7 @@
     width: 85%;
 }
 
+
 /*Resume Page*/
 .parts h1{
     letter-spacing: 0.3rem;
@@ -473,8 +478,7 @@
     cursor: pointer;
 }
 
-
-/*Portfolio-Page*/
+/*Portfolio Page*/
 .page-portfolio{
     background: linear-gradient(180.27deg, rgba(187, 112, 152, 0.226) 0.23%, 
                                            rgba(118, 0, 120, 0.233) 99.77%);
@@ -586,350 +590,141 @@ img{
 
 /*Page Contact*/
 .page-contact{
-background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),
-    url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.social-media{
-    background: #8b7292e0;
-    background: #af96b6d2;
-    height: 80%;
-    width: 40%;
-    border-radius: 8px;
-    left: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3%;
-    padding: 5%;
-    box-shadow: 0 0 40px lightgray;
-}
-
-.social-container{
-    width: 60%;
-    margin-bottom: 5%;
-}
-
-.social-container i{
-    border: 1px solid rgba(225, 225, 225, 0.986);
-    border-radius: 50%;
-    padding: 10px;
-    color: rgba(255, 255, 255, 0.473);
-    margin-right: 15px;
-    width: 3rem;
-    height: 3rem;
-    display:inline-flex;
-    justify-content: center;
-    align-items: center;
-  
-}
-
-.social-images span{
-    font-weight: 600;
-    font-size: 20px;
-    color: rgb(60, 10, 73);
-}
-
-.social-container a{
-    text-decoration: none;
-    color: #000;
-}
-.social-link{
-    margin-top: 3%;
-}
-.social-link a{
-    color: rgba(0, 0, 0, 0.678);
-}
-
-.social-container .email:hover{
-    background-color: #db4b43;
-}
-.linkedin:hover{
-    background-color: #006fae;
-}
-.github:hover{
-    background-color: #5e286c;
-}
-.codepen:hover{
-    background-color: #000000;
-}
-.form{
-    box-shadow: 0 0 5px lightgray;
-    background: #fff;
-    width: 50%;
-    /*min-height: 400px;*/
-    padding: 2% 5%;
-    position: relative;
-    border-radius: 8px;
-    margin-left: -150px;
-}
-
-form{
-    background: #fff;
-    padding: 0 1%;
-}
-
-.contact-heading{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-form div{
-    padding: 10px;
-}
-.send-button{
-    border-radius: 5px;
-    font-weight: normal;
-    padding: 7px 35px;
-    font-size: 16px;
-    background: #210035;
-    color: #fff;
-    border: none;
-}
-.send-button:hover{
-    opacity: 0.7;
-}
-
-input,textarea{
-    padding: 7px;
-    width: 100%;
-    border: 1px solid lightgray;
-    box-shadow: 0 0 5px lightgray;
-    outline: none;
-    background: #f5f5f5;
-    border-radius: 5px;
-}
-
-input:focus,
-textarea:focus{
-    outline: none !important;
-    box-shadow: 0 0 10px rgba(118, 0, 120, 0.233);
-    border: 1px solid rgba(91, 23, 122, 0.459);
-}
-
-footer{
-    height: 5rem;
-    width: 100%;
-    background: conic-gradient(from 120deg at 49.8% 74%, rgba(91, 23, 122, 0.74) 0deg, #210035 160deg, rgba(91, 23, 122, 0.74) 360deg);
-    //background: linear-gradient(342deg, rgba(91, 23, 122, 0.74) 0%, #210035 160deg 35%, rgba(91, 23, 122, 0.74) 100%);
-    color: #fff;
-    letter-spacing: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 13px;
-}
-
-/*Tablet*/
-@media (max-width:768px){
-    /*.nav-conatiner{
-        display: none;
-    }*/
-    .nav-conatiner{
-        width: 250px;
-        left: 0;
-        bottom: 0;
-        position: fixed;
-        height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),
+        url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-position: center;
         display: flex;
         justify-content: center;
-    }
-    .nav-bar{
-        width: 100%;
-        height: 100vh;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
         align-items: center;
-        border-radius: 0 15px 15px 0;
-        padding: 0;
-    }
-
-    .nav-bar a{
-        margin:0vw;
-        display: block;
-    }
-
-    .nav-section{
         width: 100%;
-        margin-top: 30px;
     }
-    .nav-section a{
-        border: 1px solid rgba(32, 30, 30, 0.233);
-        padding: 10px 0;
-        text-align: center;
-    }
-    .nav-section a:hover{
-        background-color: rgb(189, 184, 184);
-        color: #000;
-    }
-
-    .nav-social{
-        margin-top: 20%;
-    }
-    .nav-social a{
-        display: inline-block;
-        margin: 0 5px;
-    }
-    .nav-social i{
-        border: 1px solid rgba(225, 225, 225, 0.986);
-        border-radius: 50%;
-        padding: 12px;
-        color: rgba(255, 255, 255, 0.788);
-    }
-
-    .page-home .home-content{
-        font-size: 2vw;
-    }
-    /*curcle*/
-    .flow-1{
-        width: 5.5rem;
-        height: 5.5rem;
-    }
-
-    /*curcle*/
-    .flow-3{
-        width: 8vw;
-        height: 8vw;
-    }
-
-    .flow-5{
-        /*Polygon*/
-        width: 9vw;
-        height: 9vw;
-    }
-
-    /*triangle*/
-    .flow-9{
-        width: 6vw;
-        height: 6vw; 
-    }
-
-    /*Page About Me*/
-    .page-aboutme{
+    .social-media{
+        background: #8b7292e0;
+        background: #af96b6d2;
+        height: 80%;
+        width: 40%;
+        border-radius: 8px;
+        left: 5%;
         display: flex;
         flex-direction: column;
-        height: auto;
-        padding: 0 0 5%;
-    }
-    .aboutme-section-3{
-        margin: 10% 0;
-    }
-    .aboutme-section-4 h1{
-        letter-spacing: 0.5rem;
-        font-size: 4vw;
-    }
-    .aboutme-section-4 span{
-        letter-spacing: 0.6vw;
-        font-size: 1.7vw;
-    }
-
-    /*Resume Page*/
-    .page-resume{
-        height: auto;
-    }
-
-    /*Portfolio Page*/
-    .page-portfolio{
-        height: auto;
-        padding: 0 0 10%;
+        justify-content: center;
+        gap: 3%;
+        padding: 5%;
+        box-shadow: 0 0 40px lightgray;
     }
     
-    .portfolio-project .projects{
-        min-width: 300px; 
-    }
-
-    /*Contact Page*/
-    .page-contact{
-        flex-direction: column;
-        height: auto;
-        padding: 15% 0;
-    }
-
-    .social-media{
-        height: auto;
-        padding: 30px 5px 120px 5px;
-        width: 90%;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
     .social-container{
-        width: 300px;
-        margin-bottom: 2%;
-        border: 1px solid rgba(0, 0, 0, 0.068);
-        border-radius: 10px;
-        padding: 2% ;
-
+        width: 60%;
+        margin-bottom: 5%;
     }
-    .social-images{
-
-        
+    
+    .social-container i{
+        border: 1px solid rgba(225, 225, 225, 0.986);
+        border-radius: 50%;
+        padding: 10px;
+        color: rgba(255, 255, 255, 0.473);
+        margin-right: 15px;
+        width: 3rem;
+        height: 3rem;
+        display:inline-flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    
+    .social-images span{
+        font-weight: 600;
+        font-size: 20px;
+        color: rgb(60, 10, 73);
+    }
+    
+    .social-container a{
+        text-decoration: none;
+        color: #000;
     }
     .social-link{
-
-        margin: 0 0px 0 65px;
-        margin-top: -10px;
+        margin-top: 3%;
     }
-
-    .form{
-        width: 80%;
-        margin: 0;
-        margin-top: -100px;
-        padding: 40px;
-    }
-
-    /*Footer Page*/
-
-
-}
-
-@media (max-width:698px){
-    .social-container{
-        width: 70%;
-    }
-}
-
-/*Mobile*/
-@media (max-width:425px){
-    .page-home .home-content{
-        font-size: 2.5vw;
-    }
-    .aboutme-section-4 span{
-        font-size: 2vw;
-    }
-    /*Portfolio*/
-    .page-portfolio .part_1 h2{
-        font-size: 10vw;
-    }
-
-    .view-port-container{
-        width: 80%;
-        letter-spacing: 0.2rem; 
-        font-size: 12px;
-        flex-wrap: wrap;
-        height: auto;
-        padding: 5% 5%;
-        gap: 1rem;
+    .social-link a{
+        color: rgba(0, 0, 0, 0.678);
     }
     
-    .portfolio-project .projects{
-        min-width: 80%; 
+    .social-container .email:hover{
+        background-color: #db4b43;
     }
-    .social-media{
-        width: 95%;
-
+    .linkedin:hover{
+        background-color: #006fae;
+    }
+    .github:hover{
+        background-color: #5e286c;
+    }
+    .codepen:hover{
+        background-color: #000000;
     }
     .form{
-        width: 90%;
-        padding: 30px;
+        box-shadow: 0 0 5px lightgray;
+        background: #fff;
+        width: 50%;
+        /*min-height: 400px;*/
+        padding: 2% 5%;
+        position: relative;
+        border-radius: 8px;
+        margin-left: -150px;
+    }
+    
+    form{
+        background: #fff;
+        padding: 0 1%;
+    }
+    
+    .contact-heading{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    form div{
+        padding: 10px;
+    }
+    .send-button{
+        border-radius: 5px;
+        font-weight: normal;
+        padding: 7px 35px;
+        font-size: 16px;
+        background: #210035;
+        color: #fff;
+        border: none;
+    }
+    .send-button:hover{
+        opacity: 0.7;
+    }
+    
+    input,textarea{
+        padding: 7px;
+        width: 100%;
+        border: 1px solid lightgray;
+        box-shadow: 0 0 5px lightgray;
+        outline: none;
+        background: #f5f5f5;
+        border-radius: 5px;
+    }
+    
+    input:focus,
+    textarea:focus{
+        outline: none !important;
+        box-shadow: 0 0 10px rgba(118, 0, 120, 0.233);
+        border: 1px solid rgba(91, 23, 122, 0.459);
     }
     footer{
-        font-size: 2.5vw;
-        letter-spacing: 1vw;
+        height: 5rem;
+        width: 100%;
+        background: conic-gradient(from 120deg at 49.8% 74%, rgba(91, 23, 122, 0.74) 0deg, #210035 160deg, rgba(91, 23, 122, 0.74) 360deg);
+        //background: linear-gradient(342deg, rgba(91, 23, 122, 0.74) 0%, #210035 160deg 35%, rgba(91, 23, 122, 0.74) 100%);
+        color: #fff;
+        letter-spacing: 0.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
     }
-}

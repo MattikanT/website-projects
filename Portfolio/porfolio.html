@@ -18,11 +18,26 @@
     </script>-->
 </head>
 <body>
-    <div class="nav-bar">
+    <div class="nav-conatiner">
+        <div class="nav-bar">
+            <div class="nav-section">
+                <a href="#home"><span>Home</span></a>
+                <a href="#about"><span>About</span></a>
+                <a href="#resume"><span>Resume</span></a>
+                <a href="#portfolio"><span>Portfolio</span></a>
+                <a href="#contact"><span>Contact</span></a>
+            </div>
+            <div class="nav-social">
+                <a href="http://linkedin.com/in/mattikan-tongsai"> <i class="fa-brands fa-linkedin-in linkedin"></i></a>
+                <a href="https://github.com/MattikanT"><i class="fa-brands fa-github github"></i></a>
+                <a href="https://codepen.io/MattikanT"><i class="fa-brands fa-codepen codepen"></i></a>
 
+            </div>
     </div>
+    </div>
+    
     <div class="main">
-        <div class="pages page-home">
+        <div class="pages page-home" id="home">
             <div class="flows flow-1"></div>
             <div class="flows flow-2"></div>
             <div class="flows flow-3"></div>
@@ -42,11 +57,12 @@
                 <p>let's Design</p>
                 <p>I'm a fresh grauate</p>
             </div>
-            
+        
+        <!--About-Me Page-->
         </div>
-        <div class="pages page-aboutme">
+        <div class="pages page-aboutme" id="about">
             <div class="aboutme-section-1">
-                <h2>Hello,</h2>
+                <h2>Bio:</h2>
                 <p>I am fresh graduated from the university of Bahrain.I am a passionate in front-end developer and designing UI/UX design. Currently, I’m working on my skills and hope t become a grade front end developer in the future.</p>
             </div>
             <div class="aboutme-section-2">
@@ -60,15 +76,18 @@
                 
             </div>
             <div class="aboutme-section-3">
-                <img src="images/Untitled-white.jpg" alt="">
+                <img src="images/320106277_608981151042252_7791841217183454609_n.jpg" alt="">
             </div>
             <div class="aboutme-section-4">
                 <h1>MATTIKAN</h1>
                 <span>It's going to be hard BUT hard is not impossible</span>
             </div>
         </div>
-        <div class="pages page-resume">
+
+        <!--Resume Page-->
+        <div class="pages page-resume" id="resume">
             <div class=" parts part-1">
+                <div class="txt">
                 <h1>Skills</h1>
                 <div class="skill-detail">
                     <div class="skill-name">
@@ -140,24 +159,25 @@
                         </div>
                     </div>
                 </div>
-                
+                </div>
             </div>
             <div class="parts part-2">
+                <div class="txt">
                 <h1>Experience</h1>
                 <div class="experience-container">
                     <div class="experiences">
-                    <div class="experience-headings">
-                        <h3>BASF PLASTIC ADDITIVES MIDDLE EAST W.L.L (2022)</h3>
-                        <h4>Fullstack Developer - Internship</h4>
+                        <div class="experience-headings">
+                            <h3>BASF PLASTIC ADDITIVES MIDDLE EAST W.L.L (2022)</h3>
+                            <h4>Fullstack Developer - Internship</h4>
+                        </div>
+                        <div class="experience-details">
+                            <ul>
+                                <li>Digitalized manual forms and optimize workflows.</li>
+                                <li>Designed the UI/UX using Microsoft PowerApps UI controls.</li>
+                                <li>Developed the back end using Microsoft PowerFX. This includes user authentication,and user privileges.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Digitalized manual forms and optimize workflows.</li>
-                            <li>Designed the UI/UX using Microsoft PowerApps UI controls.</li>
-                            <li>Developed the back end using Microsoft PowerFX. This includes user authentication,and user privileges.</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="experiences">
                     <div class="experience-headings">
                         <h3>University of Bahrain (2021 - 2022)</h3>
@@ -171,43 +191,70 @@
                     </div>
                 </div>
                 </div>
-            </div>
-            <div class="parts part-3">
-                <h1>Certificate</h1>
-                <div class="certificates-list">
-                    <ul>
-                        <li><strong>Microsoft Office Specialist</strong> - Microsoft Office Excel 2016</li>
-                        <li><strong>Google</strong> - Google Developers Roadshow MENA 2018 Bahrain</li>
-                        <li><strong>UOB&Business Incubator Center</strong> - Innovation and entrepreneurship Summer
-                        Program 2021</li>
-                        <li><a><strong>freeCodeCamp</strong></a> - Responsive Web Design 2022</li>
-                    </ul>
                 </div>
             </div>
+            <div class="parts part-3">
+                <div class="txt">
+                    <h1>Certificate</h1>
+                    <div class="certificates-list">
+                        <ul>
+                            <li><strong>Microsoft Office Specialist</strong> - Microsoft Office Excel 2016</li>
+                            <li><strong>Google</strong> - Google Developers Roadshow MENA 2018 Bahrain</li>
+                            <li><strong>UOB&Business Incubator Center</strong> - Innovation and entrepreneurship Summer
+                            Program 2021</li>
+                            <li><a href="https://www.freecodecamp.org/certification/Mattikan_Tongsai/responsive-web-design" id="freecodecamp"><strong>freeCodeCamp</strong></a> - Responsive Web Design 2022</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
         </div>
 
-        <div class="pages page-portfolio">
+        <!--<div class="page-resume-cofee-bg"></div>-->
+
+        <div class="pages page-portfolio" id="portfolio">
             <div class="part_1">
                 <h2>Portfolio</h2>
                 <div class="view-port-container">
-                    <span>All</span>
-                    <span>Personal</span>
-                    <span>Academic</span>
+                    <button class="btn" onclick="filterObjects('all')"> <span>Show All</span> </button>
+                    <button class="btn" onclick="filterObjects('personal')"> <span> Personal</span> </button>
+                    <button class="btn" onclick="filterObjects('acadamic')"><span>Academic </span> </button>
                 </div>
             </div>
+    
             <div class="portfolio-project">
-                <div class="projects">
-                    <img src="https://th.bing.com/th/id/R.9e97dd5c060887e30c2610bc6d215193?rik=cAtaTqKthkkEJA&pid=ImgRaw&r=0" alt="">
+                <div class="projects personal">
+                    <img src="images/P-1.png" alt="" class="image">
+                    <div class="img-blur"></div>
+                    <div class="overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <div class="seperater"></div>
+                        <a href="https://www.freecodecamp.org/certification/Mattikan_Tongsai/responsive-web-design"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </div>
-                <div class="projects">
-                    <img src="https://cdn.dribbble.com/users/208801/screenshots/6576173/044_web_design_for_project_management_company.jpg" alt="">
+                    
+                <div class="projects acadamic">
+                    <img src="images/p-2.png" alt="" class="image">
+                        <div class="img-blur"></div>
+                        <div class="overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <div class="seperater"></div>
+                            <a href="https://codepen.io/MattikanT"><i class="fa-solid fa-angles-right"></i></a>
+                        </div>
                 </div>
-                <div class="projects">
-                    <img src="https://th.bing.com/th/id/R.3d6144813e5be82aad7978005415eadc?rik=HnXjO7f84dtyxw&pid=ImgRaw&r=0" alt="">
+                <div class="projects personal">
+                    <img src="images/P-3.png" alt="" class="image">
+                        <div class="img-blur"></div>
+                        <div class="overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus "></i>
+                            <div class="seperater"></div>
+                            <a href="https://github.com/MattikanT"><i class="fa-solid fa-angles-right"></i></a>
+                        </div>
                 </div>
             </div>
-        </div>
-        <div class="pages page-contact">
+        </div> 
+
+        <!--Contact Section-->
+        <div class="pages page-contact" id="contact">
             <div class="social-media">
                 <div class="social-container">
                     <div class="social-images">
@@ -282,16 +329,92 @@
                         <button type="submit" class="send-button">Send</button>     
                     </form>
             </div>
-        </div>
+       </div>
+       
     </div>
-    <script src="https://kit.fontawesome.com/c69dce7d1d.js" crossorigin="anonymous"></script>
+   <!-- <script>
+
+        filterObjects("all");
+
+        function filterObjects(c){
+            var x,i;
+            x = document.getElementsByClassName("box");
+            if(c == "all") c ="";
+            for(i = 0; i < x.length; i++){
+                removeClass(x[i], "show");
+                if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+            }
+        }
+
+        function addClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                if(arr1.indexOf(arr2[i]) == -1){
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function removeClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                while(arr1.indexOf(arr2[i]) > -1){
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+             element.className = arr1.join(" ");
+        }
+    </script>
+    
     <script>
         window.onbeforeunload = () => {
-  for(const form of document.getElementsByTagName('form')) {
-    form.reset();
-  }
-}
+        for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+             }
+        }
+    </script>-->
+    <script>
+
+        filterObjects("all");
+
+        function filterObjects(c){
+            var x,i;
+            x = document.getElementsByClassName("projects");
+            if(c == "all") c ="";
+            for(i = 0; i < x.length; i++){
+                removeClass(x[i], "show");
+                if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+            }
+        }
+
+        function addClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                if(arr1.indexOf(arr2[i]) == -1){
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function removeClass(element, name){
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                while(arr1.indexOf(arr2[i]) > -1){
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+             element.className = arr1.join(" ");
+        }
     </script>
+    <script src="https://kit.fontawesome.com/c69dce7d1d.js" crossorigin="anonymous"></script>
 </body>
 <footer>
     Design & Code by Mattikan Tongsai
