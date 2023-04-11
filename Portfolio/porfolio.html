@@ -18,23 +18,30 @@
     </script>-->
 </head>
 <body>
-    <div class="nav-conatiner">
-        <div class="nav-bar">
-            <div class="nav-section">
-                <a href="#home"><span>Home</span></a>
-                <a href="#about"><span>About</span></a>
-                <a href="#resume"><span>Resume</span></a>
-                <a href="#portfolio"><span>Portfolio</span></a>
-                <a href="#contact"><span>Contact</span></a>
-            </div>
-            <div class="nav-social">
-                <a href="http://linkedin.com/in/mattikan-tongsai"> <i class="fa-brands fa-linkedin-in linkedin"></i></a>
-                <a href="https://github.com/MattikanT"><i class="fa-brands fa-github github"></i></a>
-                <a href="https://codepen.io/MattikanT"><i class="fa-brands fa-codepen codepen"></i></a>
+    
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
 
-            </div>
-    </div>
-    </div>
+        <!--nav-bar -->
+
+    <div class="nav-bar">   
+        <div class="nav-section">
+            <a href="#home"><span>Home</span></a>
+            <a href="#about"><span>About</span></a>
+            <a href="#resume"><span>Resume</span></a>
+            <a href="#portfolio"><span>Portfolio</span></a>
+            <a href="#contact"><span>Contact</span></a>
+        </div>
+        <div class="nav-social">
+            <a href="http://linkedin.com/in/mattikan-tongsai"> <i class="fa-brands fa-linkedin-in linkedin"></i></a>
+            <a href="https://github.com/MattikanT"><i class="fa-brands fa-github github"></i></a>
+            <a href="https://codepen.io/MattikanT"><i class="fa-brands fa-codepen codepen"></i></a>
+
+        </div>
+    </div> 
     
     <div class="main">
         <div class="pages page-home" id="home">
@@ -167,6 +174,24 @@
                 <div class="experience-container">
                     <div class="experiences">
                         <div class="experience-headings">
+                            <h3>ADRI-Arabic Digital Research Institute (Feb 2023 - March 2023)</h3>
+                            <h4>Java back-end Developer - Internship</h4>
+                        </div>
+                        <div class="experience-details">
+                            <ul>
+                                <li>Dealt with MySQL databases and manipulated data using queries.</li>
+                                <li>Created end-points using java language and spring-boot framework
+                                    and added other functionalities such as ReCAPTCHA and dealt
+                                    with the database.</li>
+                                <li>Did research and learned on how to use 9 E-utilities API on the
+                                    NCBI website.</li>
+                                <li>Wrote a Python script to automatically fetch and tract resources
+                                        to be processed by the team.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experiences">
+                        <div class="experience-headings">
                             <h3>BASF PLASTIC ADDITIVES MIDDLE EAST W.L.L (2022)</h3>
                             <h4>Fullstack Developer - Internship</h4>
                         </div>
@@ -178,6 +203,7 @@
                             </ul>
                         </div>
                     </div>
+
                 <div class="experiences">
                     <div class="experience-headings">
                         <h3>University of Bahrain (2021 - 2022)</h3>
@@ -207,9 +233,10 @@
                     </div>
                 </div>
         </div>
+        <div class="page-resume-cofee-bg"></div>
         </div>
 
-        <!--<div class="page-resume-cofee-bg"></div>-->
+        
 
         <div class="pages page-portfolio" id="portfolio">
             <div class="part_1">
@@ -233,7 +260,7 @@
                 </div>
                     
                 <div class="projects acadamic">
-                    <img src="images/p-2.png" alt="" class="image">
+                    <img src="images/P-2.png" alt="" class="image">
                         <div class="img-blur"></div>
                         <div class="overlay">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -332,51 +359,7 @@
        </div>
        
     </div>
-   <!-- <script>
-
-        filterObjects("all");
-
-        function filterObjects(c){
-            var x,i;
-            x = document.getElementsByClassName("box");
-            if(c == "all") c ="";
-            for(i = 0; i < x.length; i++){
-                removeClass(x[i], "show");
-                if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
-            }
-        }
-
-        function addClass(element, name){
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for(i = 0; i < arr2.length; i++){
-                if(arr1.indexOf(arr2[i]) == -1){
-                    element.className += " " + arr2[i];
-                }
-            }
-        }
-
-        function removeClass(element, name){
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for(i = 0; i < arr2.length; i++){
-                while(arr1.indexOf(arr2[i]) > -1){
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-             element.className = arr1.join(" ");
-        }
-    </script>
-    
-    <script>
-        window.onbeforeunload = () => {
-        for(const form of document.getElementsByTagName('form')) {
-        form.reset();
-             }
-        }
-    </script>-->
+   
     <script>
 
         filterObjects("all");
